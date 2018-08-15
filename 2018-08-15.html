@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>日報</title>
+  <title>日報 2018-08-15</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -18,18 +18,55 @@
 </head>
 <body>
 <header>
-<h1 class="title">日報</h1>
+<h1 class="title">日報 2018-08-15</h1>
 </header>
+<table>
+<tbody>
+</tbody>
+</table>
+<p>インターンが今週から始まった。九人来ていたがB3が自分含めて二人だけで仲良くなった。かなりの関数型使いでpurescriptが好きであるようだ。それ以外にもウェブサービスに関する洞察が良くて話していて色々勉強になった。</p>
+<p>関数型は純粋数学の中での圏論を少しだけわかるようになってから、むしろ特段意識しない対象になっていた。モナドはそうでも無いが、随伴やファンクタの概念は数学のなかでは頻出で興味の対象ではなくなってしまったからだ。</p>
+<p>計算機理論を全く知らないで、当たり前のことかもしれないが会話で面白いと思ったことを書いておく。こっから先は私の中の直感的なイメージと記憶の中の会話を語るので、厳密な議論は参考文献の方がいい。飲み会の中で面白かった話は演算対象とエントロピーと副作用の話である。人間は計算結果として2や3といったこれ以上計算手続きを踏むことが不可能な値を欲しがる。しかしながら副作用のない数学的演算、すなわち1+1や(2+3)*5などといったものは2や25 であるが、数学的演算で記述された文字列そのものを対象として扱うと文字列とInt空間には同値な対象を定義することができる。すなわち数学的演算はIntよりも次元である文字列の空間から Intへの写像だと定義することができる。ここで面白い議論は計算機の中であったらIntよりも高次元であろうと同値ならばそれ以上は低い次元に落とさずとも同値な対象として扱われるのでそもそも副作用を含まない関数は演算する必要すらないと言うことである。その話において彼は、高い次元にいる状態をエントロピーの高い状態と表現した。エントロピーの高低関係なく同値類が存在しそれらが必ず同値類になることが副作用のない状態だと話していた。面白い話だと思った。</p>
+<p>似たような概念が以下のサイトにあると教えてくれた。 http://www.nue.ie.niigata-u.ac.jp/toyama/lab-intro/TRS-intro/index.html</p>
+<p>ちょうどそれに感化されて色々調べていたら、いま数学でやっているファイブレーションの概念が計算機科学の中に登場することを知った。ファイブレーションとは写像の一種でありもともと位相幾何学のホモトピー同値という、同型写像よりも荒いいくつかの位相不変量を保存する写像の一つである。簡単に例を挙げると円周とソリッドトーラスはホモトピー同値である。のちにそれはfibrationという圏論の射の概念へと一般化される。これは同型射全体を含む弱同値射という新たな射のクラスを備えた圏であるということである。対象Aから対象Bへの弱同値射があれば、AとBは弱同値という。弱同型写ならば同型射ではないため弱同型射の逆写像を考えることは直感的不自然である。</p>
+<p>https://ncatlab.org/nlab/show/model+structure+for+quasi-categories</p>
+<p>このようなモデルは2+3 = 5のような一見可逆性がないように見える概念を表しているように感じる。計算行為を射とする圏を考えて、すべての射を弱同値射とみなして作ったホモトピー圏は、計算結果の等値性を射とする圏となるということである。これは前半の話にもつながるが、エントロピーの不可逆性をうまいこと説明可能にした圏の概念な気がする。</p>
+<p>ざっくりとわかりやすく説明できたかわからないが、私がもともとmodel categoryを勉強していた時に出てきた概念が、ちょうど計算理論にも出てきたので、イメージを話して見た。</p>
+<p>ちょうどモデル圏について勉強していたのでそのうちまとめたい。モデル圏は主に一般的なホモロジー 、コホモロジー論を議論する上で非常に有益な道具となる。ちょうど私が勉強しているところにつながってきた。勉強途中ではあるが、少しだけ良さげなリンクをいかに貼っておく。</p>
+<p>https://en.wikipedia.org/wiki/Weak_equivalence_(homotopy_theory) 一般コホモロジー | 河野 明, 玉木 大 http://folk.uio.no/paularne/SUPh05/DS.pdf</p>
+<p>このようなホモトピー同値性を計算的な手続きの写像として議論する学問を HoTT というらしい。面白い。</p>
+<p>計算機理論で言えば、デカルト閉圏であるがどんな圏か忘れたのでwikipediaであるが重要なものを記しておく。計算手続きについてである。 — データ型 Y と Z に対し、Z-Y は Y の型のデータを入力とし、Z の型のデータを出力とするような計算手続きの型を表していると考えることができる。このとき、eval: Z^Y × Y → Z とは個々の計算手続きと入力データに対して出力データを計算する手続きであると解釈することができる。 —</p>
+<p>同期とここまで酔ながら話せる環境は良い。インターン、イノベーションラボという研究を好きにやっていいところの上席研究員の人からぜひアルバイトに来ないかと誘われた。嬉しい。将来、そこまで仕事やキャリアに命をかけるつもりはないので、日経のような意識が高すぎず低すぎず、待遇の良い会社は担保しておきたい。東京遠い。</p>
+<h2 id="日課">日課</h2>
 <ul>
-<li>
-<a href="./2018-08-15.html">2018-08-15</a>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> 読書
+<ul>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> 代数学2　環と体とガロア理論
 </li>
-<li>
-<a href="./2018-08-10.html">2018-08-10</a>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> ルベーグ積分　テレンスタオ
 </li>
-<li>
-<a href="./2018-08-09.html">2018-08-09</a>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> 一般コホモロジー
 </li>
 </ul>
+</li>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> アプリ
+</li>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> 研究
+<ul>
+<li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled /> 論文
+</li>
+</ul>
+</li>
+</ul>
+<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
+<script>document.addEventListener("DOMContentLoaded", () => twemoji.parse(document.body, { folder: "svg", ext: ".svg" }));</script>
+<a href="./index.html">一覧</a>
 </body>
 </html>
